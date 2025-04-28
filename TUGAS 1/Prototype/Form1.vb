@@ -140,7 +140,7 @@ Public Class Form1
             RD.Read()
             If Not RD.HasRows Then
                 RD.Close()
-                CMD = New MySqlCommand("INSERT INTO tbPeminjaman VALUES (@kode, @nama, @jumlah, @alamat, @nomor, @tanggal, @foto, @status)", CONN)
+                CMD = New MySqlCommand("INSERT INTO tbPeminjaman VALUES (@kode,@status ,@nama, @jumlah, @alamat, @nomor, @tanggal, @foto)", CONN)
                 CMD.Parameters.AddWithValue("@kode", TxtKode.Text)
                 CMD.Parameters.AddWithValue("@nama", TxtNama.Text)
                 CMD.Parameters.AddWithValue("@jumlah", TxtJumlah.Text)
